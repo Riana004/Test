@@ -4,8 +4,9 @@
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>FrontServlet</welcome-file>
     </welcome-file-list>
+
     <servlet>
         <servlet-name>FrontServlet</servlet-name>
         <servlet-class>servlets.FrontServlet</servlet-class>

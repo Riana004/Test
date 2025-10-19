@@ -7,7 +7,7 @@
 </head>
 <body>
     <p>
-        <%= request.getAttribute("url") %>
+        bibity bobity boo
     </p>
 </body>
 </html>
