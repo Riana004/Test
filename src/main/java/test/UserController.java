@@ -1,13 +1,13 @@
 package test;
 
 import annotations.Controller;
-import annotations.TestAnnotation;
+import annotations.Url;
 import retour.ModelView;
 
 @Controller("/user")
 public class UserController {
     
-    @TestAnnotation("/profile")
+    @Url("/profile")
     public ModelView getUserProfile() {
         ModelView modelView = new ModelView("user-profile.jsp");
         
@@ -20,7 +20,7 @@ public class UserController {
         return modelView;
     }
     
-    @TestAnnotation("/list")
+    @Url("/list")
     public ModelView getUserList() {
         ModelView modelView = new ModelView("user-list.jsp");
         

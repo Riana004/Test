@@ -1,36 +1,37 @@
 package test;
 import annotations.Controller;
-import annotations.TestAnnotation;
+import annotations.RequestParam;
+import annotations.Url;
 import retour.ModelView;
 
 @Controller
 public class TestController {
-    @TestAnnotation("/ranto")
+    @Url("/ranto")
     public String ranto() {
         return "Bonjour Ranto";
     }
-    @TestAnnotation("/dylan")
+    @Url("/dylan")
     public void dylan() {
         
     }
-    @TestAnnotation("/randy")
+    @Url("/randy")
     public String randy() {
         return "Bonjour Randy";
     }
 
-    @TestAnnotation("/test/{id}/info/{name}")
-    public String testId() {
-        return "Test ID";
+    @Url("/test/{id}/info/{name}")
+    public String testId(@RequestParam(value = "id", required = true) int caca, String name) {
+        return "ID: " + caca + ", Name: " + name;
     }
 
-    @TestAnnotation("/")
+    @Url("/")
     public ModelView home() {
         ModelView mv = new ModelView("formulaire.html");
         return mv;
     }
 
-    @TestAnnotation("/test/param")
-    public String testParam(String name, int age) {
-        return "Nom: " + name + ", Age: " + age;
+    @Url("/test/param")
+    public String testParam(@RequestParam(value = "name", required = true) String nom, int age) {
+        return "Nom: " + nom + ", Age: " + age;
     }
 }

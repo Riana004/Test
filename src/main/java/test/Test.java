@@ -1,10 +1,10 @@
 package test;
 import annotations.Controller;
-import annotations.TestAnnotation;
+import annotations.Url;
 
 @Controller
 public class Test {
-    @TestAnnotation("/test")
+    @Url("/test")
     public void testMethod() {
         
     }
