@@ -63,7 +63,7 @@ if exist "%LIB_DIR%" (
 set CLASSPATH=%CLASSPATH%;%TOMCAT_WEBAPPS_DIR%\..\lib\servlet-api.jar
 
 :: Compiler les fichiers Java
-javac -cp "%CLASSPATH%" -d "%CLASSES_DIR%" @java_files.txt
+javac -parameters -cp "%CLASSPATH%" -d "%CLASSES_DIR%" @java_files.txt
 
 if %errorlevel% neq 0 (
     echo ERREUR: La compilation a échoué!
