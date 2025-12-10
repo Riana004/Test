@@ -1,5 +1,6 @@
 package test;
 import annotations.Controller;
+import annotations.PostRequest;
 import annotations.RequestParam;
 import annotations.Url;
 import retour.ModelView;
@@ -30,7 +31,7 @@ public class TestController {
         return mv;
     }
 
-    @Url("/test/param")
+    @PostRequest("/test/param")
     public String testParam(@RequestParam(value = "name", required = true) String nom, int age) {
         return "Nom: " + nom + ", Age: " + age;
     }

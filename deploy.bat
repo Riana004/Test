@@ -2,7 +2,7 @@
 set BUILD_DIR=build_test
 set WEBAPP_DIR=webapps
 set WAR_NAME=test.war
-set TOMCAT_WEBAPPS_DIR="C:\Users\rmita\Documents\Riana\Utils\apache-tomcat-10.1.28\webapps"
+set TOMCAT_WEBAPPS_DIR="/opt/apache-tomcat-10.1.28/webapps"
 set SRC_DIR=src
 set LIB_DIR="webapps\WEB-INF\lib"
 set CLASSES_DIR=%BUILD_DIR%\WEB-INF\classes

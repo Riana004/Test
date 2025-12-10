@@ -2,6 +2,7 @@ package test;
 
 import annotations.Controller;
 import annotations.Url;
+import annotations.GetRequest;
 import retour.ModelView;
 
 @Controller("/user")
@@ -20,7 +21,7 @@ public class UserController {
         return modelView;
     }
     
-    @Url("/list")
+    @GetRequest("/list")
     public ModelView getUserList() {
         ModelView modelView = new ModelView("user-list.jsp");
         

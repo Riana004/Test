@@ -10,7 +10,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import annotations.Controller;
 
-public class TestAnnontation {
+public class TestAnnotation {
     public static List<Class<?>> findAnnotatedClasses(String packageName, Class<?> annotation)
             throws Exception {
         List<Class<?>> classes = new ArrayList<>();

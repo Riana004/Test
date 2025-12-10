@@ -3,6 +3,7 @@
         "src\\main\\java"
     ],
     "java.project.referencedLibraries": [
-        "webapps\\WEB-INF\\lib\\Test.jar"
+        "webapps\\WEB-INF\\lib\\Test.jar",
+        "webapps/WEB-INF/lib/Test.jar"
     ]
 }
