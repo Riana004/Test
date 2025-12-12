@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Map<String,Object></title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 720px; margin: 40px auto; line-height: 1.5; }
+        fieldset { margin-bottom: 24px; padding: 16px; }
+        label { display: block; margin: 6px 0 2px; font-weight: bold; }
+        input { padding: 6px; width: 100%; box-sizing: border-box; }
+        button { margin-top: 12px; padding: 8px 12px; cursor: pointer; }
+        .hint { color: #555; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h1>Tests Map&lt;String,Object&gt;</h1>
+
+    <form method="POST" action="/test/map/capture">
+        <fieldset>
+            <legend>Retour String</legend>
+            <label for="name">name (required)</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">age</label>
+            <input type="number" id="age" name="age">
+
+            <label for="city">city (extra)</label>
+            <input type="text" id="city" name="city">
+
+            <label for="role">role (extra)</label>
+            <input type="text" id="role" name="role">
+
+            <button type="submit">Tester /map/capture</button>
+            <div class="hint">La réponse affichera name, age et extras (sans les clés déjà consommées).</div>
+        </fieldset>
+    </form>
+
+    <form method="POST" action="/test/map/mv">
+        <fieldset>
+            <legend>Retour ModelView vers user-profile.jsp</legend>
+            <label for="title">title (required)</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="username">username</label>
+            <input type="text" id="username" name="username" placeholder="ex: Alice">
+
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" placeholder="ex: alice@example.com">
+
+            <label for="age">age</label>
+            <input type="number" id="age" name="age" min="0" step="1" placeholder="ex: 28">
+
+            <label for="isActive">isActive</label>
+            <select id="isActive" name="isActive">
+                <option value="">-- non renseigné --</option>
+                <option value="true">Actif</option>
+                <option value="false">Inactif</option>
+            </select>
+
+            <button type="submit">Tester /map/mv</button>
+            <div class="hint">Envoie title + infos utilisateur vers user-profile.jsp (sans paramètres extras).</div>
+        </fieldset>
+    </form>
+</body>
+</html>
